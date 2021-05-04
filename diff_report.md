@@ -146,7 +146,7 @@ procdumpP1(struct proc *p, char *state_string)
   int i;
   uint pc[10];
   char *state;
-  uint enumState = p -> state;
+  uint enumState = p->state;
 
   if(enumState==0) {state="Unused";}
   else if(enumState==1) {state="Embryo";}
