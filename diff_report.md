@@ -41,7 +41,7 @@ syscall(void)
 
   #ifdef CS333_P1 //diubah dari sini
     #ifdef PRINT_SYSCALLS
-      cprintf("%s -> %d \n", syscallnames[num], num);
+      cprintf("%s -> %d\n", syscallnames[num], num);
     #endif
   #endif //CS333_P1
 
@@ -136,7 +136,7 @@ Setelah diubah
   #endif
 ```
 
-##### Line 562-594
+##### Line 563-613
 Setelah diubah
 ```C
 #elif defined(CS333_P1)
@@ -148,16 +148,34 @@ procdumpP1(struct proc *p, char *state_string)
   char *state;
   uint enumState = p->state;
 
-  if(enumState==0) {state="Unused";}
-  else if(enumState==1) {state="Embryo";}
-  else if(enumState==2) {state="Sleeping";}
-  else if(enumState==3) {state="Runnable";}  
-  else if(enumState==4) {state="Running";}
-  else {state="Zombie";}
+  if(enumState==0) 
+  {
+    state="Unused";
+  }
+  else if(enumState==1) 
+  {
+    state="Embryo";
+  }
+  else if(enumState==2) 
+  {
+    state="Sleeping";
+  }
+  else if(enumState==3) 
+  {
+    state="Runnable";
+  }  
+  else if(enumState==4) 
+  {
+    state="Running";
+  }
+  else 
+  {
+    state="Zombie";
+  }
 
   uint tick1 = ticks-p -> start_ticks;
   uint tick2 = tick1 / 1000;
-  uint tick3 = tick1 % (tick2*1000);
+  uint tick3 = tick1 % 1000;
 
   cprintf("%d", tick1);
 
