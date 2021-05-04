@@ -136,50 +136,24 @@ Setelah diubah
   #endif
 ```
 
-##### Line 562-613
+##### Line 562-594
 Setelah diubah
 ```C
-#if defined(CS333_P2)
-void
-procdumpP2P3P4(struct proc *p, char *state_string)
-{
-  cprintf("TODO for Project 2, delete this line and implement procdumpP2P3P4() in proc.c to print a row\n");
-  return;
-}
 #elif defined(CS333_P1)
 void
 procdumpP1(struct proc *p, char *state_string)
 {
-  //CODE TODO
   int i;
   uint pc[10];
   char *state;
-  uint enumState = p->state;
+  uint enumState = p -> state;
 
-  if(enumState==0) 
-  {
-    state="Unused";
-  }
-  else if(enumState==1) 
-  {
-    state="Embryo";
-  }
-  else if(enumState==2) 
-  {
-    state="Sleeping";
-  }
-  else if(enumState==3) 
-  {
-    state="Runnable";
-  }  
-  else if(enumState==4) 
-  {
-    state="Running";
-  }
-  else 
-  {
-    state="Zombie";
-  }
+  if(enumState==0) {state="Unused";}
+  else if(enumState==1) {state="Embryo";}
+  else if(enumState==2) {state="Sleeping";}
+  else if(enumState==3) {state="Runnable";}  
+  else if(enumState==4) {state="Running";}
+  else {state="Zombie";}
 
   uint tick1 = ticks-p -> start_ticks;
   uint tick2 = tick1 / 1000;
