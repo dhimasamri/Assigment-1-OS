@@ -96,7 +96,7 @@ sys_date(void)
   cmostime(d);
   return 0;
 }
-#endif // CS333_P1
+#endif
 ```
 
 ## Proc.h
@@ -122,7 +122,7 @@ struct proc {
   //diubah dari sini
   #ifdef CS333_P1
   uint start_ticks;
-  #endif // CS333_P1
+  #endif
 };
 ```
 
