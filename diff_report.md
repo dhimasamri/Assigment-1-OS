@@ -73,7 +73,7 @@ SYSCALL(date)
 ```
 
 ## User.h
-##### Line 46-49
+##### Line 47-49
 ```H
 
 #ifdef CS333_P1
@@ -82,7 +82,7 @@ int date(struct rtcdate*);
 ```
 
 ## Sysproc.c
-##### Line 101-112
+##### Line 101-111
 Setelah diubah
 ```C
 #ifdef CS333_P1
