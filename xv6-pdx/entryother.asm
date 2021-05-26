@@ -45,6 +45,7 @@ start:
 
 00007020 <start32>:
 
+//PAGEBREAK!
 .code32  # Tell assembler to generate 32-bit code now.
 start32:
   # Set up the protected-mode data segment registers
