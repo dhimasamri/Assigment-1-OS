@@ -342,6 +342,7 @@ bad:
   return 0;
 }
 
+//PAGEBREAK!
 // Map user virtual address to kernel address.
 char*
 uva2ka(pde_t *pgdir, char *uva)
@@ -382,7 +383,10 @@ copyout(pde_t *pgdir, uint va, void *p, uint len)
   return 0;
 }
 
+//PAGEBREAK!
 // Blank page.
+//PAGEBREAK!
 // Blank page.
+//PAGEBREAK!
 // Blank page.
 
